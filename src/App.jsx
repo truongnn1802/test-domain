@@ -2,6 +2,7 @@ import "./App.css";
 
 function App() {
   const domain = window.location;
+  console.log(domain.hostname);
   console.log(domain.hostname.split('.')[0]);
 
   
