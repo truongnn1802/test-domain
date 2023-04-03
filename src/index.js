@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const domain = window.location.hostname;
+const domain = window.location;
 console.log(domain);
 root.render(
   <React.StrictMode>
