@@ -6,7 +6,7 @@ function App() {
 
   const templates = {
     "tieu-hoc": <p>Tiểu học</p>,
-    "mam-non": <p>mẫu giáo</p>,
+    "mau-giao":<p>mẫu giáo</p>,
     thcs: <p>thcs</p>,
     phonggiaoduc: <p>phonggiaoduc</p>,
     default: <p>Test</p>,
@@ -14,7 +14,7 @@ function App() {
 
   console.log(templates[hostname]);
   const renderLayout = () => {
-    return templates[hostname] || templates['tieu-hoc'];
+    return templates[hostname] || templates['default'];
   };
   return <div className="App">{renderLayout()}</div>;
 }
