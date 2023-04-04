@@ -2,20 +2,19 @@ import "./App.css";
 
 function App() {
   const domain = window.location;
-  console.log(domain.hostname);
-  console.log(domain.hostname.split(".")[0]);
+  const hostname = domain.hostname.split(".")[0]
 
   const templates = {
     "tieu-hoc": <p>Tiểu học</p>,
-    "mam-non": <p>Tiểu học</p>,
-    thcs: <p>Tiểu học</p>,
-    pgd: <p>Tiểu học</p>,
+    "mam-non": <p>mẫu giáo</p>,
+    thcs: <p>thcs</p>,
+    phonggiaoduc: <p>phonggiaoduc</p>,
     default: <p>Test</p>,
   };
 
-  console.log(templates[domain.hostname]);
+  console.log(templates[hostname]);
   const renderLayout = () => {
-    return templates[domain.hostname] || templates['default'];
+    return templates[hostname] || templates['tieu-hoc'];
   };
   return <div className="App">{renderLayout()}</div>;
 }
